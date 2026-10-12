@@ -1,0 +1,1 @@
+import{a as e}from"./index-BnCTFPUA.js";var t=e({ARTIFACT:()=>!1}),n=!1;export{t as n,n as t};

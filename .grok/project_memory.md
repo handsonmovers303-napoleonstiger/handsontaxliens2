@@ -1,0 +1,6 @@
+- Members app live at https://members.handsontaxliens.com/#/deck (hash SPA, Supabase auth, preview deck readable without login) [2026-10-06]
+- Deck route shows Countydex card stack. Preview opened on El Paso County CO (FIPS 08041), card 0267/3143, tax lien certificate, RealAuction, verified Sep 4 2026. Deck scoped "County 1 of 11" with no campaign. [2026-10-06]
+- Locked product rule still in force: no gamification. Live deck currently shows XP, swipe count, rarity ("Uncommon"), and "checks until capture" — flagged for cut. [2026-10-06]
+- Next-step checklist saved to artifacts/hotl-deck-next-steps-checklist.md (false scores, real-time claim, game layer, one watch list, label the 11, mark preview). [2026-10-06]
+- Member deck source is handsonmovers303-napoleonstiger/handsontaxliens, src/legacy/ScoutingDept.jsx, branch claude/serene-cray-lnlmhu. Trust-copy patch written to artifacts/deck-trust-copy.patch. Not pushed. Login-shell "Real-time auction data" was not in this repo. [2026-10-06]
+- 3-save free-tier upgrade trigger implemented and pushed to claude/serene-cray-lnlmhu (commit f1eb318). Stars/saves limited to 3 for free; 4th opens upgrade modal linking to Pro. Client-side only; subscription status wiring still needed. [2026-10-08]

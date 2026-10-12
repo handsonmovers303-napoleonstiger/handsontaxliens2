@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Hands On Tax Liens",
+      "hasCanvas": false,
+      "bodyTextLen": 7574,
+      "bodyTextHash": "90b0acea5799fd96c31a2cd374c21544c48d8f775d9998a451144365aa72ccaf",
+      "bodyTextPrefix": "Hands On Tax Liens BETA Home Console Grid Counties Dossiers Miss",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/hotl-home.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Hands On Tax Liens",
+      "hasCanvas": false,
+      "bodyTextLen": 7435,
+      "bodyTextHash": "5c40e641b7b21bf4fc4d62d9fdbbfe7b78710ed65e6c47b51e2caed35d12fbe9",
+      "bodyTextPrefix": "Home Console Grid Counties Dossiers Missions Scout Routes Auctio",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/hotl-home-mobile.png"
+    }
+  },
+  "brandWarnings": [
+    "BRAND NOTE: no custom public/og.jpg — the platform will serve the og.grok.me placeholder. Custom cards are the default for games of every kind (DOM board/word games included), whimsical apps, creative tools, and brand-forward pages — only plain utilities (converters, CRUD trackers, admin dashboards) keep the placeholder. If this app is not a plain utility, finish the brand-asset pass per /workspace/.grok/skills/og/SKILL.md."
+  ],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/hotl-home.json"
+}
