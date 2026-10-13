@@ -1,0 +1,30 @@
+{
+  "name": "handsontaxliens",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "build:artifact": "node scripts/build-artifact.mjs",
+    "test": "vitest run",
+    "push": "node server/push-server.mjs",
+    "test:blackswan": "vitest run tests/blackswan.test.js --reporter=verbose"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.117.2",
+    "d3-geo": "^3.1.1",
+    "leaflet": "^1.9.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "topojson-client": "^3.1.0",
+    "us-atlas": "^3.0.1",
+    "web-push": "^3.6.7"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.7.0",
+    "vite": "^5.4.21",
+    "vitest": "^2.1.9"
+  }
+}

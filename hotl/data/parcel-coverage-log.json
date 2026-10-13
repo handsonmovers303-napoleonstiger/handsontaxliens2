@@ -1,0 +1,72 @@
+{
+  "asOf": "2026-10-11",
+  "universe": 3143,
+  "counts": {
+    "verified-county": 68,
+    "verified-state": 748,
+    "visual-only": 0,
+    "partial": 46,
+    "not-tested": 2281
+  },
+  "addedThisRun": {
+    "FL": 21,
+    "ND": 50
+  },
+  "notAdded": {
+    "FL": [
+      "Flagler",
+      "Highlands",
+      "Gadsden",
+      "Indian River",
+      "Jackson",
+      "Franklin",
+      "Hernando",
+      "Citrus",
+      "Glades",
+      "Bradford",
+      "Charlotte",
+      "Alachua",
+      "Bay",
+      "Brevard",
+      "Columbia",
+      "Leon",
+      "Marion",
+      "Martin",
+      "Nassau",
+      "Polk",
+      "St. Johns",
+      "St. Lucie",
+      "Wakulla",
+      "Walton",
+      "Clay",
+      "Escambia",
+      "Okaloosa",
+      "Orange",
+      "Santa Rosa",
+      "Sarasota",
+      "Seminole",
+      "Sumter",
+      "Gulf",
+      "Hamilton",
+      "Lake",
+      "Osceola",
+      "Volusia"
+    ],
+    "ND": [
+      "Sioux",
+      "McKenzie",
+      "Dunn"
+    ]
+  },
+  "investigatedNotUsed": {
+    "IA": "The current Iowa Department of Revenue Properties layer has no parcel-id field.",
+    "MS": "No statewide parcel query service. MARIS is not a cadastral layer.",
+    "MI": "The state parcel layer is internal and not on the open-data portal.",
+    "OK": "The August 2026 statewide parcels are view-only WMS, not a parcel-id query.",
+    "KS": "ORKA is county-by-county. A statewide GIS download requires each county to approve a request.",
+    "KY": "No statewide parcel query service was found. Fayette has its own layer and was not added in this run.",
+    "WV": "A July 2026 statewide tax-map file is published for download. No public query endpoint was tested.",
+    "TX": "No statewide parcel query service.",
+    "GA": "No statewide parcel query service."
+  }
+}
