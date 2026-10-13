@@ -1,0 +1,45 @@
+name: County market check
+
+# Re-downloads the Census and FEMA county files. Census and FEMA do not
+# publish daily, so this runs once a month. A change opens a pull request.
+# It does not merge and it does not deploy. Merging onto the default branch
+# is what updates the site, through the existing build workflow.
+on:
+  schedule:
+    - cron: "0 14 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Pull Census and FEMA county files
+        run: python3 scripts/scrape-county-market.py
+      - name: Open a pull request if a figure changed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet -- src/holo/countyMarket.json; then
+            echo "No source change."
+            exit 0
+          fi
+          branch="county-market-$(date -u +%Y%m%d)"
+          git config user.name "county-market-check"
+          git config user.email "41898282+county-market-check@users.noreply.github.com"
+          git checkout -B "$branch"
+          git add src/holo/countyMarket.json
+          git commit -m "County market: a source file changed"
+          git push --force-with-lease origin "$branch"
+          gh pr create --base "${{ github.event.repository.default_branch }}" \
+            --head "$branch" \
+            --title "County market: a source file changed" \
+            --body "The monthly county-market check re-downloaded the Census and FEMA files and a figure changed. This is a source pull, not a county verification, and not a parcel fact. Merging updates the county file. This workflow does not merge and does not deploy." \
+            || echo "A pull request for this branch is already open."
