@@ -858,3 +858,61 @@ kbd { font-family: var(--f-num); font-size: 10.5px; padding: 1px 5px; border-rad
 @media (min-width: 901px) {
   .atlas { height: 100%; min-height: 0; }
 }
+
+/* ── Command Center polish (2026-10-13) ──────────────────────────────
+   One strip height drives every panel, so nothing slides under it. */
+.nav-primary { flex: 0 0 auto; overflow: visible; }
+.nav-search { flex: 1 1 180px; min-width: 0; justify-content: flex-end; }
+.nav-search input { width: 100%; max-width: 300px; min-width: 0; }
+
+.atlas { --strip-h: 52px; --cc-gap: 14px; --clear: calc(var(--strip-h) + var(--cc-gap) + 12px); }
+.atlas-strip { height: var(--strip-h); bottom: var(--cc-gap); padding: 0 16px; gap: 22px; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
+.atlas-strip::-webkit-scrollbar { display: none; }
+.atlas-strip ol, .atlas-strip ul { flex-wrap: nowrap; flex: 0 0 auto; }
+.atlas-strip ul { gap: 12px; }
+.atlas-strip li { white-space: nowrap; }
+.atlas-layers, .atlas-card { max-height: calc(100% - 58px - var(--clear)); scrollbar-width: thin; scrollbar-color: rgba(232,208,154,.3) transparent; }
+.atlas-block, .atlas-picks { -webkit-mask-image: linear-gradient(#000 calc(100% - 20px), transparent); mask-image: linear-gradient(#000 calc(100% - 20px), transparent); padding-bottom: 14px; }
+.atlas-block button { padding: 6px 8px; margin: 0 -8px; border-radius: 8px; }
+.atlas-block button:hover, .atlas-picks button:hover { background: rgba(232,208,154,.08); }
+.atlas-map .leaflet-top.leaflet-left { bottom: calc(var(--clear) + 52px); right: var(--cc-gap); }
+.atlas-map .leaflet-bottom.leaflet-right { bottom: var(--clear); right: calc(var(--cc-gap) + 52px); }
+.atlas-quiet { bottom: var(--clear); }
+/* Feedback becomes a quiet round button above the strip on the map. */
+.holo-root:has(.atlas) .fb-fab { width: 44px; height: 44px; padding: 0; justify-content: center; border-radius: 50%; font-size: 0; gap: 0; right: calc(14px); bottom: calc(52px + 14px + 12px); }
+
+@media (max-width: 900px) {
+  .atlas { --strip-h: 46px; --cc-gap: 8px; }
+  .atlas-strip { left: var(--cc-gap); right: var(--cc-gap); padding: 0 12px; gap: 16px; }
+  .atlas-card { bottom: var(--clear); max-height: 40vh; }
+  .atlas-map .leaflet-top.leaflet-left { left: var(--cc-gap); right: auto; bottom: calc(40vh + var(--clear) + 8px); }
+  .atlas.card-shut .atlas-map .leaflet-top.leaflet-left { bottom: var(--clear); }
+  .atlas-map .leaflet-bottom.leaflet-right { right: var(--cc-gap); bottom: calc(40vh + var(--clear) + 8px); }
+  .atlas.card-shut .atlas-map .leaflet-bottom.leaflet-right { bottom: var(--clear); }
+  .holo-root:has(.atlas) .fb-fab { top: calc(env(safe-area-inset-top, 0px) + 8px); bottom: auto; right: auto; left: 50%; transform: translateX(-50%); width: 36px; height: 36px; opacity: 0; pointer-events: none; }
+  .holo-root:has(.atlas.card-shut) .fb-fab { opacity: 1; pointer-events: auto; top: auto; bottom: var(--clear, 66px); left: auto; right: 8px; transform: none; }
+}
+@media (max-width: 760px) {
+  .topbar-in { flex-wrap: wrap; }
+  .topbar-in > .brand { flex: 0 0 auto; }
+  .nav-search { order: 2; flex: 1 1 0; }
+  .nav-search button { display: none; }
+  .topbar .btn-chip { font-size: 0; gap: 0; padding: 8px !important; }
+}
+.holo-root:has(.atlas) .fb-fab { left: auto; }
+.atlas-card .atlas-block { max-height: none; overflow: visible; -webkit-mask-image: none; mask-image: none; padding-bottom: 0; }
+.holo-root:has(.main.bleed) { height: 100dvh; min-height: 0; display: flex; flex-direction: column; overflow: hidden; }
+.holo-root:has(.main.bleed) .main.bleed { flex: 1; min-height: 0; overflow: hidden; padding: 0; }
+.holo-root:has(.main.bleed) .atlas { height: 100%; min-height: 0; }
+@media (max-width: 760px) {
+  .nav-primary { overflow-x: auto; flex: 1 1 100%; }
+  .nav-search { order: 1; }
+  .topbar-in > .help-btn, .topbar-in > .btn-chip { order: 2; }
+  .holo-root:has(.atlas) .research-disclaimer { font-size: 11px; padding: 4px 12px; line-height: 1.35; }
+}
+@media (min-width: 901px) { .atlas-card { max-height: calc(100% - 58px - var(--clear) - 72px); } }
+@media (max-width: 900px) {
+  .atlas-layers.open { max-height: calc(100% - 92px - var(--clear)); }
+  .atlas.layers-open .leaflet-control-zoom, .atlas.layers-open .leaflet-control-attribution { visibility: hidden; }
+  .holo-root:has(.atlas.layers-open) .fb-fab { opacity: 0; pointer-events: none; }
+}
