@@ -916,3 +916,38 @@ kbd { font-family: var(--f-num); font-size: 10.5px; padding: 1px 5px; border-rad
   .atlas.layers-open .leaflet-control-zoom, .atlas.layers-open .leaflet-control-attribution { visibility: hidden; }
   .holo-root:has(.atlas.layers-open) .fb-fab { opacity: 0; pointer-events: none; }
 }
+
+/* ── App-wide polish (2026-10-13) ───────────────────────────────────── */
+/* Feedback: a quiet round button that never sits on a label. */
+.fb-fab { width: 44px; height: 44px; padding: 0; justify-content: center; border-radius: 50%; font-size: 0; gap: 0; }
+.fb-fab svg { width: 17px; height: 17px; }
+@media (hover: hover) and (min-width: 901px) {
+  .holo-root:not(:has(.atlas)) .fb-fab:hover, .holo-root:not(:has(.atlas)) .fb-fab:focus-visible { width: auto; padding: 0 16px; gap: 6px; border-radius: 999px; font-size: 12.5px; }
+}
+
+/* Long pick lists stay in reach while the file beside them scrolls. */
+@media (min-width: 901px) {
+  .split > .glass.col:has(> .col.scroll) { position: sticky; top: 76px; max-height: calc(100dvh - 92px); display: flex; flex-direction: column; }
+  .split > .glass.col:has(> .col.scroll) > .col.scroll { flex: 1 1 auto; min-height: 0; max-height: none; }
+}
+.col.scroll { -webkit-mask-image: linear-gradient(#000 calc(100% - 24px), transparent); mask-image: linear-gradient(#000 calc(100% - 24px), transparent); padding-bottom: 18px; }
+
+@media (max-width: 760px) {
+  .research-disclaimer { font-size: 11px; padding: 4px 12px 6px; line-height: 1.35; }
+  .split > .glass.col > .col.scroll { max-height: 44vh; }
+  .sec-head h1, .sec-head h2 { font-size: 22px; line-height: 1.15; }
+  .screen-lead p { font-size: 13px; }
+}
+
+/* Touch screens: no sticky hover on the tab bar. */
+@media (hover: none) {
+  .nav-primary > button:not(.on):hover, .nav-more > button:not(.on):hover { background: transparent; border-color: transparent; color: var(--ink-2); box-shadow: none; }
+}
+/* Tab bar edges fade so a scrolled row reads as scrollable. */
+@media (max-width: 760px) {
+  .nav-primary { -webkit-mask-image: linear-gradient(90deg, transparent, #000 14px, #000 calc(100% - 22px), transparent); mask-image: linear-gradient(90deg, transparent, #000 14px, #000 calc(100% - 22px), transparent); padding: 2px 14px; }
+  /* List rows with an action button: the button drops to its own line. */
+  .list-item:has(> .btn.sm) { flex-wrap: wrap; row-gap: 8px; }
+  .list-item:has(> .btn.sm) > .btn.sm { flex: 1 1 100%; justify-content: center; }
+  .list-item b { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; }
+}

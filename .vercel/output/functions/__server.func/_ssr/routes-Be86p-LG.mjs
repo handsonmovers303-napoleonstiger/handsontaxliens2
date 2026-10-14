@@ -1,6 +1,6 @@
 import { i as __toESM } from "../_runtime.mjs";
 import { G as require_jsx_runtime, K as require_react } from "../_libs/@tanstack/react-router+[...].mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-B7mwPrt5.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-Be86p-LG.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 function loadResearchApp() {
@@ -8,7 +8,7 @@ function loadResearchApp() {
 		import("./storage-CIP8wSw4.mjs").then((n) => n.n),
 		import("./live-C-rRXH6n.mjs").then((n) => n.t),
 		import("./env-A6UFay6O.mjs").then((n) => n.n),
-		import("./App-D217AVBv.mjs")
+		import("./App-g1BbjTlg.mjs")
 	]).then(([storage, live, env, app]) => ({
 		installStorage: storage.installStorage,
 		installLive: live.installLive,
