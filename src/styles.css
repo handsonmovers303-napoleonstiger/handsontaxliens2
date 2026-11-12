@@ -1,8 +1,136 @@
 @import "tailwindcss";
 
+@theme {
+  --color-bg: #071018;
+  --color-bg-elev: #101a26;
+  --color-bg-subtle: #182433;
+  --color-fg: #f3ede2;
+  --color-muted: #b3a794;
+  --color-subtle: #8c8172;
+  --color-line: #2c3a4a;
+  --color-gold: #c6a15a;
+  --color-gold-fg: #1a1408;
+  --color-lien: #8ea4b5;
+  --color-deed: #b08a68;
+  --color-unknown: #44505c;
+  --color-ok: #8aa584;
+  --color-danger: #c46a5a;
+  --font-sans: "IBM Plex Sans", "Segoe UI", sans-serif;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
 @layer base {
+  html {
+    background: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    min-height: 100dvh;
+    background: var(--color-bg);
+    color: var(--color-fg);
+  }
+
   button:not(:disabled),
   [role="button"]:not(:disabled) {
     cursor: pointer;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: var(--color-gold);
+    color: var(--color-gold-fg);
+  }
+}
+
+.map-stage {
+  height: 62dvh;
+  background: var(--color-bg);
+}
+
+.map-overlay,
+.map-legend {
+  z-index: 500;
+}
+
+.atlas-aside {
+  background: var(--color-bg-elev);
+}
+
+@media (min-width: 1024px) {
+  .map-stage {
+    height: calc(100dvh - 6.75rem);
+  }
+
+  .atlas-aside {
+    width: 24rem;
+    max-height: calc(100dvh - 6.75rem);
+    overflow: auto;
+  }
+}
+
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+  background: var(--color-bg);
+  font-family: var(--font-sans);
+}
+
+.leaflet-bar a,
+.leaflet-bar a:hover {
+  background: var(--color-bg-elev);
+  color: var(--color-fg);
+  border-bottom-color: var(--color-line);
+}
+
+.leaflet-bar {
+  border: 1px solid var(--color-line);
+}
+
+.leaflet-control-attribution {
+  background: color-mix(in oklab, var(--color-bg) 88%, transparent);
+  color: var(--color-subtle);
+  font-size: 10px;
+}
+
+.leaflet-control-attribution a {
+  color: var(--color-muted);
+}
+
+.atlas-tip {
+  background: var(--color-bg-elev);
+  color: var(--color-fg);
+  border: 1px solid var(--color-line);
+  border-radius: 2px;
+  box-shadow: none;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  padding: 4px 8px;
+}
+
+.atlas-tip::before {
+  border-top-color: var(--color-line);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
