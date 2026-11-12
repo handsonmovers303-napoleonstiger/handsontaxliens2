@@ -1,0 +1,149 @@
+{
+  "retrieved": "2026-11-12",
+  "note": "Pages opened and read on this date. These rows override older research-file dates for the same county. A blank field means the page did not state it.",
+  "counties": {
+    "08069": {
+      "source": {
+        "title": "Larimer County Treasurer — Tax Lien Sale",
+        "url": "https://www.larimer.gov/treasurer/thirdparty/liens/sale",
+        "retrieved": "2026-11-12"
+      },
+      "auctionType": "Tax lien certificate. The buyer receives a lien, not the property.",
+      "format": "In person",
+      "platform": "No online auction platform. The sale is held in a room, with bidding in seating order.",
+      "place": "Thomas McKee 4-H Community Building, Larimer County Fairgrounds at the Ranch, 5280 Arena Circle, Loveland, CO",
+      "interest": "13% for the 2026 sale. The county calculates it as nine percentage points over the federal discount rate as of September 1, rounded to the nearest percent (C.R.S. 39-12-103).",
+      "redemption": "The page directs investors to the county's Treasurer's Deed information for the deed path. It separately states that certificates are canceled after fifteen years (C.R.S. 39-11-148).",
+      "sale": {
+        "iso": "2026-11-19",
+        "text": "The 2026 tax lien sale is November 19, 2026. Doors open for registration at 7:30 a.m. Premium bidding begins at 8:30 a.m."
+      },
+      "registration": {
+        "iso": null,
+        "text": "Registration is completed the morning of the sale, starting at 7:30 a.m. A W-9 is required. Updated forms mailed or delivered to the Treasurer must arrive no later than two days before the sale. The page does not publish a separate registration-deadline date."
+      },
+      "deposit": "The page does not describe a bidder deposit. Purchases must be paid in full by personal or business check before leaving. Cash and certified funds are not accepted.",
+      "phone": "(970) 498-7020",
+      "extras": [
+        "County officials, employees, their immediate families, and their agents cannot buy (C.R.S. 39-11-151).",
+        "Premium bids were described using the 2025 threshold: parcels of $5,000 or more, starting at $50, in $50 steps. Premiums are not refunded and earn no interest. The page does not restate a 2026 premium threshold.",
+        "Assignment of an existing lien is processed starting in January, with a $52 fee. That fee is for assignments, not for entering the sale."
+      ]
+    },
+    "08041": {
+      "source": {
+        "title": "El Paso County Treasurer — Tax Lien Sale",
+        "url": "https://treasurer.elpasoco.com/tax-lien-sale/",
+        "retrieved": "2026-11-12"
+      },
+      "auctionType": "Tax lien certificate of purchase. The buyer does not receive ownership, possession, or access.",
+      "format": "Online",
+      "platform": "RealAuction",
+      "place": null,
+      "interest": "13% for the 2026 sale, described as nine percentage points above the federal discount rate in effect on September 1. The county says this accrues monthly at 1.08% while the lien is unpaid.",
+      "redemption": "Three years from the year of the original tax sale before a Treasurer's Deed application. The county says fewer than 1% of tax liens result in a deed.",
+      "sale": {
+        "iso": "2026-10-28",
+        "text": "October 28, 2026: annual tax lien sale. Bidding closes on the schedule set inside RealAuction."
+      },
+      "registration": {
+        "iso": "2026-10-27",
+        "text": "October 27, 2026 at 2:00 p.m. MST is the deadline to submit the deposit, enter ACH redemption information, and complete the participation acknowledgement. Registration, deposits, and bidding opened September 30, 2026."
+      },
+      "deposit": "A deposit is required in RealAuction by the October 27 deadline. The sale page does not state the deposit amount.",
+      "phone": "719-520-7900",
+      "extras": [
+        "Premium bids are not refunded.",
+        "The delinquent list is advertised in The Gazette on September 16, September 23, and September 30.",
+        "A September 2026 research note still listed the 2026 date and rate as missing, and recorded 14% as the 2025 sale rate. The page opened November 12, 2026 states the 2026 figures above."
+      ]
+    },
+    "08037": {
+      "source": {
+        "title": "Eagle County Treasurer — Tax Lien Sale",
+        "url": "https://www.eaglecounty.us/departments___services/office_of_the_treasurer/tax_lien_sale.php",
+        "retrieved": "2026-11-12"
+      },
+      "auctionType": "Tax lien. Investors purchase a lien, not the property.",
+      "format": "Online",
+      "platform": "RealAuction — eagle.coloradotaxsale.com",
+      "place": null,
+      "interest": "13% for the 2026 sale. The page also states the statutory method: nine points above the federal discount rate for September 1.",
+      "redemption": "Three years from the year of the original tax sale, then an application for a public auction. The page says there is an $800 deposit to start that auction process. It also says a certificate of purchase is valid for 7 years from the sale date. Mobile homes are called out as different: a certificate of ownership may be available after one year.",
+      "sale": {
+        "iso": "2026-11-10",
+        "text": "Tuesday, November 10, 2026, online. Successful bidders pay the advertised amount, which the page says includes delinquent tax, interest, an advertising fee, and an $18 certificate fee, plus any premium."
+      },
+      "registration": {
+        "iso": "2026-11-03",
+        "text": "The last day to register and submit a deposit is November 3, 2026 at 2:00 p.m. MT. The same page also has a heading that reads \"Registration: October 15, 2026.\" Both sentences are on the page. October 15 is not labeled as the deadline."
+      },
+      "deposit": "At least 10% of what you plan to spend, by ACH, before bidding. Final payment is also ACH.",
+      "phone": "970-328-8860",
+      "extras": [
+        "Premiums are not returned and earn no interest.",
+        "A September 2026 research note said the 2026 rate was not published yet. The page opened November 12, 2026 states 13%."
+      ]
+    },
+    "08077": {
+      "source": {
+        "title": "Mesa County Treasurer — Bidding information",
+        "url": "https://www.mesacounty.us/departments-and-services/treasurer/bidding-information",
+        "retrieved": "2026-11-12"
+      },
+      "auctionType": "Tax lien certificate. The page says you do not have an ownership right, only a property tax lien, until you apply for and receive a deed.",
+      "format": "Online",
+      "platform": "RealAuction. Batches of about 400 properties close in one-hour steps, with batch 1 closing at 9:00 a.m. MDT.",
+      "place": null,
+      "interest": "13% for 2026 certificates. The page says redeemed certificates pay nine points over the federal discount rate.",
+      "redemption": "The page says you may apply after 3 years. Premiums are not returned and do not draw interest.",
+      "sale": {
+        "iso": "2026-11-06",
+        "text": "The Mesa County tax lien sale will be held via the internet on November 6, 2026. Research on the auction site was scheduled to begin Monday, September 21, 2026."
+      },
+      "registration": {
+        "iso": null,
+        "text": "Registration and a deposit are required before a bid is accepted. The page says deposits have a due date and tells the reader to check the schedule of events. It does not print that due date in the bidding section."
+      },
+      "deposit": "10% of the dollar amount of certificates the bidder anticipates winning, by ACH inside RealAuction, no later than 2:00 p.m. on the deposit due date. Personal checks and cash are not accepted for the deposit. Winning bids must be paid on the auction site no later than November 9, 2026 at 2:00 p.m. MDT.",
+      "phone": null,
+      "supersedes": "A September 2026 research note and an October 8, 2026 page scrape both recorded October 16, 2026 as the sale date, and the research note recorded a 15% rate. The treasurer page opened November 12, 2026 says November 6, 2026 and 13%. The October 16 date is not shown as current.",
+      "extras": [
+        "Premium bidding above 30% shows a warning the bidder can pass. Premiums are a cost of the lien and are not returned.",
+        "Bid increments are $1.00.",
+        "County employees, officials, their immediate families, and agents may not acquire a lien (C.R.S. 39-11-151)."
+      ],
+      "payment": {
+        "iso": "2026-11-09",
+        "text": "Winning bidders must pay the auction site no later than November 9, 2026 at 2:00 p.m. MDT."
+      }
+    },
+    "08035": {
+      "source": {
+        "title": "Douglas County Treasurer — Tax Lien Sale Information",
+        "url": "https://www.douglasco.gov/treasurer/tax-lien-sale-information/",
+        "retrieved": "2026-11-12"
+      },
+      "auctionType": "Tax lien certificate. The county says you purchase the lien, not the property, and that a deed transfer has occurred in less than 1 percent of purchases.",
+      "format": "Online",
+      "platform": "SRI Incorporated — zeusauction.com",
+      "place": null,
+      "interest": "The page headline states the 2026 interest is 13%. The same page says the State Banking Commission sets the annual rate at nine points above the federal discount rate as of September 1.",
+      "redemption": "After 3 years from the date of the tax lien, the investor can apply for a Treasurer's deed.",
+      "sale": {
+        "iso": "2026-11-05",
+        "text": "The page states: \"The 2026 Internet Tax Lien Sale will be held Nov 5th, 2026.\" A FAQ on the same page says the sale is generally in early November and must be held on or before the second Monday in December."
+      },
+      "registration": {
+        "iso": null,
+        "text": "The page does not state a registration deadline. It says auction information is posted in October, when the advertised list is available."
+      },
+      "deposit": "The page does not state a deposit amount. It says winning bids are paid by ACH from the bank account given at registration, after bids are finalized.",
+      "phone": "303-660-7455",
+      "extras": [
+        "Premium bids are never returned and draw no interest.",
+        "A September 2026 research note did not have a 2026 sale date. It recorded only the statutory outer bound (on or before the second Monday in December) and the SRI / ACH terms. The November 5 date comes from the page opened November 12, 2026."
+      ]
+    }
+  }
+}

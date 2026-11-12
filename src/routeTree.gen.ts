@@ -10,33 +10,73 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as CalendarRouteImport } from './routes/calendar'
+import { Route as MethodRouteImport } from './routes/method'
+import { Route as SavedRouteImport } from './routes/saved'
+import { Route as CountyFipsRouteImport } from './routes/county.$fips'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CalendarRoute = CalendarRouteImport.update({
+  id: '/calendar',
+  path: '/calendar',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MethodRoute = MethodRouteImport.update({
+  id: '/method',
+  path: '/method',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SavedRoute = SavedRouteImport.update({
+  id: '/saved',
+  path: '/saved',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CountyFipsRoute = CountyFipsRouteImport.update({
+  id: '/county/$fips',
+  path: '/county/$fips',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/calendar': typeof CalendarRoute
+  '/method': typeof MethodRoute
+  '/saved': typeof SavedRoute
+  '/county/$fips': typeof CountyFipsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/calendar': typeof CalendarRoute
+  '/method': typeof MethodRoute
+  '/saved': typeof SavedRoute
+  '/county/$fips': typeof CountyFipsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/calendar': typeof CalendarRoute
+  '/method': typeof MethodRoute
+  '/saved': typeof SavedRoute
+  '/county/$fips': typeof CountyFipsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/calendar' | '/method' | '/saved' | '/county/$fips'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/calendar' | '/method' | '/saved' | '/county/$fips'
+  id: '__root__' | '/' | '/calendar' | '/method' | '/saved' | '/county/$fips'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CalendarRoute: typeof CalendarRoute
+  MethodRoute: typeof MethodRoute
+  SavedRoute: typeof SavedRoute
+  CountyFipsRoute: typeof CountyFipsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +88,43 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/calendar': {
+      id: '/calendar'
+      path: '/calendar'
+      fullPath: '/calendar'
+      preLoaderRoute: typeof CalendarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/method': {
+      id: '/method'
+      path: '/method'
+      fullPath: '/method'
+      preLoaderRoute: typeof MethodRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/saved': {
+      id: '/saved'
+      path: '/saved'
+      fullPath: '/saved'
+      preLoaderRoute: typeof SavedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/county/$fips': {
+      id: '/county/$fips'
+      path: '/county/$fips'
+      fullPath: '/county/$fips'
+      preLoaderRoute: typeof CountyFipsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CalendarRoute: CalendarRoute,
+  MethodRoute: MethodRoute,
+  SavedRoute: SavedRoute,
+  CountyFipsRoute: CountyFipsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

@@ -30,6 +30,7 @@
         "./src/research-app-types.ts"
       ]
     },
+    "resolveJsonModule": true,
     "allowImportingTsExtensions": true
   },
   "include": [
